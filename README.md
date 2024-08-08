@@ -4,7 +4,7 @@ Kindly follow these instructions to get the project up and running on your syste
 
 ## Prerequisites
 
-Before you start, make sure you have Python 3.10 installed on your system. Additionally, you might need `python3-pip` and `python3.10-venv` if you're on Linux, but these are optional.
+Before you start, make sure you have Python 3.10.12 installed on your system. Additionally, you might need `python3-pip` and `python3.10-venv` if you're on Linux, but these are optional.
 
 ## Setup Instructions
 

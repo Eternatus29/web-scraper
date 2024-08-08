@@ -1,6 +1,6 @@
-from web_scraper import fetch_html, parse_html
-from ner import extract_entities
-from sentiment import load_model_and_tokenizer, analyze_sentiment
+from modules.web_scraper import fetch_html, parse_html
+from modules.ner import extract_entities
+from modules.sentiment import load_model_and_tokenizer, analyze_sentiment
 
 def main():
     # Get user input
@@ -11,14 +11,15 @@ def main():
     
     if html_content:
         article_text = parse_html(html_content)
-        print("\nArticle Text:")
-        print(article_text)
+        # The following lines can be commented to check out the scraped text.
+        # print("\nArticle Text:")
+        # print(article_text)
         
         # Extract entities
         entities = extract_entities(article_text)
         print("\nEntities Extracted:")
-        print("Persons:", entities['PERSON'])
-        print("Organizations:", entities['ORG'])
+        print("Persons:\n", entities['PERSON'], "\n\n")
+        print("Organizations:\n", entities['ORG'])
         
         # Analyze sentiment
         tokenizer, model = load_model_and_tokenizer()
